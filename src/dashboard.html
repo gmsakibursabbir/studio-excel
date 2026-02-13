@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+</head>
+
+<body class="font-work-sans bg-[#ffffff] relative h-screen">
+    <!-- Desktop Sidebar -->
+    <aside
+        class="fixed left-0 top-0 h-full w-[250px] bg-white border-r border-[#F6F5FA] hidden lg:flex flex-col z-[60]">
+        <!-- Logo -->
+        <div class="h-[100px] flex items-center justify-center border-b border-[#F6F5FA]">
+            <h1 class="text-[24px] font-bold text-[#5D55B2]">StudioExcel</h1>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="flex-1 overflow-y-auto py-[20px] px-[16px] flex flex-col gap-[8px]">
+            <!-- Home (Active) -->
+            <a href="dashboard.html"
+                class="flex items-center gap-[12px] px-[16px] py-[12px] bg-[#F6F5FA] rounded-[12px] text-[#5D55B2]">
+                <img src="./images/home.svg" alt="home" class="h-[20px] w-auto filter-purple">
+                <span class="text-[16px] font-medium">Home</span>
+            </a>
+            <!-- Winery -->
+            <a href="#"
+                class="flex items-center gap-[12px] px-[16px] py-[12px] hover:bg-[#F6F5FA] rounded-[12px] text-[#545454] hover:text-[#5D55B2] group transition-all">
+                <img src="./images/wine.svg" alt="winery"
+                    class="h-[20px] w-auto group-hover:filter-purple grayscale opacity-70 group-hover:opacity-100 group-hover:grayscale-0 transition-all">
+                <span class="text-[16px] font-medium">Winery</span>
+            </a>
+            <!-- Orders -->
+            <a href="#"
+                class="flex items-center gap-[12px] px-[16px] py-[12px] hover:bg-[#F6F5FA] rounded-[12px] text-[#545454] hover:text-[#5D55B2] group transition-all">
+                <img src="./images/task.svg" alt="orders"
+                    class="h-[20px] w-auto group-hover:filter-purple grayscale opacity-70 group-hover:opacity-100 group-hover:grayscale-0 transition-all">
+                <span class="text-[16px] font-medium">Orders</span>
+            </a>
+            <!-- Notes -->
+            <a href="#"
+                class="flex items-center gap-[12px] px-[16px] py-[12px] hover:bg-[#F6F5FA] rounded-[12px] text-[#545454] hover:text-[#5D55B2] group transition-all">
+                <img src="./images/notes.svg" alt="notes"
+                    class="h-[20px] w-auto group-hover:filter-purple grayscale opacity-70 group-hover:opacity-100 group-hover:grayscale-0 transition-all">
+                <span class="text-[16px] font-medium">Notes</span>
+            </a>
+        </nav>
+
+        <!-- User Profile (Bottom) -->
+        <div class="p-[16px] border-t border-[#F6F5FA]">
+            <div class="flex items-center gap-[12px]">
+                <img src="https://i.pravatar.cc/100?img=1" alt="avatar" class="w-[40px] h-[40px] rounded-full">
+                <div class="flex flex-col">
+                    <span class="text-[14px] font-semibold text-[#1F1F1F]">Alex Joy</span>
+                    <span class="text-[12px] text-[#545454]">Admin</span>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- navbar (removable) -->
+    <header class="py-[10px] px-[20px] absolute w-full top-0 z-[99] block md:hidden lg:hidden bg-white">
+        <div class="flex justify-between items-center">
+            <!-- left -->
+            <div class="">
+                <span class="text-[10px] text-[#1F1F1F] font-medium uppercase">9:00 AM</span>
+            </div>
+            <!-- right -->
+            <div class="flex flex-row items-center gap-[6.27px]">
+                <img src="./images/navbar/black-network.svg" alt="network" class="h-[11.23px] w-full">
+                <img src="./images/navbar/black-wifi.svg" alt="wifi" class="h-[11.23px] w-full">
+                <img src="./images/navbar/black-battery.svg" alt="battery" class="h-[11.23px] w-full">
+            </div>
+        </div>
+    </header>
+    <!-- main content -->
+    <main class="">
+        <!-- top bar -->
+        <section
+            class="px-[20px] fixed top-0 pt-[56px] w-full lg:w-[calc(100%-250px)] lg:left-[250px] z-10 bg-white transition-all">
+            <!-- 1 -->
+            <div class="flex flex-row items-center justify-between">
+                <!-- left -->
+                <div class="flex flex-row items-center gap-[10px]">
+                    <div>
+                        <img src="https://i.pravatar.cc/100?img=1" alt="avater" class="w-[44px] h-[44px] rounded-full">
+                    </div>
+                    <div class="flex flex-col">
+                        <h2 class="text-[18px] md:text-[24px] text-[#000000] font-bold transition-all">Hello Alex!</h2>
+                        <span
+                            class="text-[14px] md:text-[16px] text-[#545454] font-medium transition-all">Dashboard</span>
+                    </div>
+                </div>
+                <!-- right -->
+                <div class="flex flex-row gap-[8px]">
+                    <button
+                        class="w-[44px] h-[44px] rounded-full border-[1px] border-[#E2E2E2] flex justify-center items-center relative">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M11.0183 2.66748C7.98413 2.66748 5.51829 5.13331 5.51829 8.16748V10.8166C5.51829 11.3758 5.27996 12.2283 4.99579 12.705L3.94163 14.4558C3.29079 15.5375 3.73996 16.7383 4.93163 17.1416C8.88246 18.4616 13.145 18.4616 17.0958 17.1416C18.205 16.775 18.6908 15.4641 18.0858 14.4558L17.0316 12.705C16.7566 12.2283 16.5183 11.3758 16.5183 10.8166V8.16748C16.5183 5.14248 14.0433 2.66748 11.0183 2.66748Z"
+                                stroke="#111526" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" />
+                            <path
+                                d="M12.7142 2.93332C12.43 2.85082 12.1367 2.78665 11.8342 2.74999C10.9542 2.63999 10.1108 2.70415 9.32251 2.93332C9.58834 2.25499 10.2483 1.77832 11.0183 1.77832C11.7883 1.77832 12.4483 2.25499 12.7142 2.93332Z"
+                                stroke="#111526" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M13.7683 17.4717C13.7683 18.9842 12.5308 20.2217 11.0183 20.2217C10.2666 20.2217 9.56998 19.91 9.07498 19.415C8.57998 18.92 8.26831 18.2233 8.26831 17.4717"
+                                stroke="#111526" stroke-width="1.5" stroke-miterlimit="10" />
+                        </svg>
+
+                        <div
+                            class="w-[6px] h-[6px] loginbg text-white text-[10px] font-medium flex justify-center items-center absolute top-[7px] right-[7px] rounded-full border-[1px] border-[#FFFFFF]">
+                        </div>
+                    </button>
+                    <button
+                        class="w-[44px] h-[44px] rounded-full border-[1px] border-[#E2E2E2] flex justify-center items-center relative">
+                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M9.84114 19.7905C7.46196 19.7905 5.0828 19.7905 2.70362 19.7905C0.865158 19.7905 0 19.0335 0 17.0869C0 14.2751 0 11.4633 0 8.75973C0 6.48869 0.973303 5.51539 3.24434 5.62354C4.65022 5.73168 4.97466 5.19095 4.86651 3.89322C4.75837 3.35249 4.86651 2.81177 4.86651 2.27105C4.97466 0.75702 5.6235 0 7.13753 0C10.49 0 13.8425 0 17.195 0C17.7357 0 18.0602 0.108145 18.3846 0.540724C18.4928 0.648868 18.6009 0.757033 18.709 0.865178C20.4393 2.59549 22.7104 4.10951 23.5755 6.16426C24.4407 8.21901 23.7918 10.8145 23.7918 13.1937C23.7918 15.8973 23.7918 18.6009 23.7918 21.1964C23.7918 23.143 23.0348 23.9 21.0882 23.9C16.438 23.9 11.8959 23.9 7.24568 23.9C5.62351 23.9 4.75836 23.143 4.75836 21.8452C4.75836 21.5208 4.65021 21.0882 5.19093 21.0882C5.51537 21.0882 5.94796 20.9801 5.94796 21.5208C5.94796 22.7104 6.92124 22.6023 7.67825 22.6023C12.004 22.6023 16.438 22.6023 20.7638 22.6023C22.0615 22.6023 22.6022 22.1697 22.4941 20.872C22.3859 16.5462 22.4941 12.2204 22.4941 8.00274C22.4941 7.02943 22.1697 6.81314 21.3045 6.81314C20.3312 6.92128 19.3579 6.70499 18.3846 6.81314C17.0869 6.92128 16.7624 6.38056 16.7624 5.19097C16.8706 4.21766 16.7624 3.1362 16.7624 2.16289C16.7624 1.40588 16.5461 1.1896 15.7891 1.1896C12.8692 1.1896 10.0574 1.1896 7.13753 1.1896C6.16422 1.1896 5.73166 1.6222 5.73166 2.5955C5.73166 4.65025 5.73166 6.59683 5.73166 8.65158C5.73166 9.62488 6.0561 9.73303 6.92126 9.73303C10.1656 9.73303 13.4099 9.73303 16.6543 9.73303C18.8172 9.73303 19.5742 10.4901 19.5742 12.6529C19.5742 14.0588 19.5742 15.4647 19.5742 16.8706C19.5742 19.0335 18.8172 19.7905 16.6543 19.7905C14.5995 19.7905 12.2203 19.7905 9.84114 19.7905ZM9.51672 17.3032C11.1389 17.3032 11.8959 16.6543 11.6796 15.4647C11.5715 14.4914 10.9226 14.167 10.0574 14.0588C9.84116 14.0588 9.51672 14.0588 9.51672 13.7344C9.51672 13.3018 9.84116 13.3018 10.1656 13.3018C10.5982 13.3018 11.0308 13.3018 11.3552 13.1937C11.7878 13.0855 12.004 12.5448 11.5715 12.3285C10.8145 11.8959 9.84116 12.0041 9.08415 12.3285C8.43528 12.5448 8.11083 13.1937 8.21897 13.9507C8.32712 14.7077 8.75972 15.2484 9.62488 15.3566C9.94931 15.3566 10.5982 15.2484 10.49 15.8973C10.3819 16.438 9.84116 16.2217 9.51672 16.2217C8.976 16.3299 8.21898 16.1136 8.32712 16.8706C8.32712 17.6276 9.08414 17.3032 9.51672 17.3032ZM5.29909 17.4113C5.51538 17.3032 5.8398 17.3032 6.16423 17.0869C6.59681 16.8706 7.02939 16.6543 6.81311 16.1136C6.59682 15.5729 6.16424 15.7892 5.73166 16.0054C5.08279 16.3299 4.43391 16.2217 4.00134 15.5729C3.56876 15.0321 3.56876 14.3833 4.00134 13.8425C4.43391 13.1937 5.08279 13.1937 5.73166 13.41C6.16424 13.6263 6.70496 13.7344 6.81311 13.0855C6.92125 12.5448 6.38051 12.3285 6.05608 12.1122C4.97463 11.7878 4.00136 11.8959 3.24434 12.7611C2.37918 13.6263 2.27104 14.5995 2.70362 15.681C3.1362 16.8706 4.00135 17.3032 5.29909 17.4113ZM15.2484 15.0321C14.9239 14.167 14.5995 13.41 14.2751 12.6529C14.1669 12.2204 13.8425 12.0041 13.4099 12.2204C12.9774 12.3285 12.9773 12.6529 13.0855 13.0855C13.6262 14.2751 14.0588 15.5728 14.4914 16.7624C14.5995 17.0869 14.7077 17.3032 15.1403 17.4113C15.5728 17.4113 15.7891 17.0869 15.8973 16.7624C16.3298 15.5728 16.8706 14.3833 17.3032 13.3018C17.5194 12.8692 17.5194 12.4367 16.9787 12.3285C16.438 12.1122 16.2217 12.5448 16.1136 12.9774C15.8973 13.5181 15.5728 14.167 15.2484 15.0321ZM4.86651 8.32716C5.0828 7.24571 4.75835 6.59685 3.46061 6.81314C2.48731 6.92128 1.29771 6.81313 1.18957 8.21901C1.18957 9.73303 2.27102 9.73303 3.46061 9.73303C4.6502 9.73303 5.19095 9.51675 4.86651 8.32716Z"
+                                fill="#111526" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M11.5715 3.56887C10.7063 3.56887 9.84114 3.56887 8.97598 3.56887C8.54341 3.56887 8.11084 3.35258 8.11084 2.92C8.11084 2.48742 8.43525 2.37927 8.86783 2.37927C10.5981 2.37927 12.4366 2.37927 14.1669 2.37927C14.5995 2.37927 14.9239 2.48742 14.9239 2.92C14.9239 3.46072 14.4914 3.56887 14.0588 3.56887C13.3018 3.56887 12.4366 3.56887 11.5715 3.56887Z"
+                                fill="#111526" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M11.6796 4.75842C12.5448 4.75842 13.4099 4.75842 14.2751 4.75842C14.7076 4.75842 15.0321 4.86657 15.0321 5.29915C15.0321 5.73173 14.7077 5.94799 14.3832 5.94799C12.5448 5.94799 10.7063 5.94799 8.86783 5.94799C8.43525 5.94799 8.11084 5.73173 8.11084 5.29915C8.11084 4.86657 8.43525 4.75842 8.86783 4.75842C9.84114 4.75842 10.7063 4.75842 11.6796 4.75842Z"
+                                fill="#111526" />
+                        </svg>
+
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dashboard Content -->
+        <section
+            class="pt-[124px] px-[20px] pb-[120px] overflow-y-auto h-screen bg-[#FFFFFF] lg:pl-[270px] lg:pt-[140px] transition-all">
+
+            <!-- Results -->
+            <h2 class="text-[18px] md:text-[22px] font-medium text-[#000000] mb-[12px] md:mb-[20px] transition-all">
+                Results</h2>
+
+            <!-- Stats Grid Container -->
+            <div class="bg-[#F6F5FA] p-[12px] rounded-[16px] md:p-[20px]">
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-[12px] md:gap-[20px]">
+                    <!-- Card 1 -->
+                    <div
+                        class="bg-white px-[10px] py-[12px] md:px-[20px] md:py-[24px] rounded-[16px] flex flex-col transition-all">
+                        <span
+                            class="text-[20px] md:text-[28px] font-semibold text-[#5D55B2] transition-all">$3.000</span>
+                        <span
+                            class="text-[14px] md:text-[16px] font-medium text-[#545454] mt-[12px] transition-all">Revenue
+                            This Week</span>
+                    </div>
+                    <!-- Card 2 -->
+                    <div
+                        class="bg-white px-[10px] py-[12px] md:px-[20px] md:py-[24px] rounded-[16px] flex flex-col transition-all">
+                        <span class="text-[20px] md:text-[28px] font-semibold text-[#5D55B2] transition-all">$500</span>
+                        <span
+                            class="text-[14px] md:text-[16px] font-medium text-[#545454] mt-[12px] transition-all">Revenue
+                            Today</span>
+                    </div>
+                    <!-- Card 3 -->
+                    <div
+                        class="bg-white px-[10px] py-[12px] md:px-[20px] md:py-[24px] rounded-[16px] flex flex-col transition-all">
+                        <span
+                            class="text-[20px] md:text-[28px] font-semibold text-[#5D55B2] transition-all">$3.000</span>
+                        <span
+                            class="text-[14px] md:text-[16px] font-medium text-[#545454] mt-[12px] transition-all">Week
+                            Revenue</span>
+                    </div>
+                    <!-- Card 4 -->
+                    <div
+                        class="bg-white px-[10px] py-[12px] md:px-[20px] md:py-[24px] rounded-[16px] flex flex-col transition-all">
+                        <span class="text-[20px] md:text-[28px] font-semibold text-[#5D55B2] transition-all">$500</span>
+                        <span class="text-[14px] md:text-[16px] font-medium text-[#545454] mt-[12px] transition-all">Day
+                            Revenue</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Top Clients -->
+            <h2
+                class="text-[18px] md:text-[22px] font-medium text-[#000000] mt-[20px] mb-[12px] md:mb-[20px] transition-all">
+                Top 10 clients - last 30 days</h2>
+
+            <!-- Clients List Container -->
+            <div class="bg-[#F6F5FA] px-[19px] py-[16px] rounded-[16px] md:p-[20px]">
+                <div
+                    class="bg-white py-[15px] px-[17px] md:p-[20px] rounded-[12px] flex flex-col gap-[14px] md:gap-[20px]">
+                    <!-- Client 1 -->
+                    <div
+                        class="flex justify-between items-center transition-all p-[10px] hover:bg-[#F6F5FA] rounded-[8px]">
+                        <span class="text-[14px] md:text-[16px] font-normal text-[#000000]">2022 Albariño Fruit
+                            Winery</span>
+                        <span class="text-[14px] md:text-[16px] font-semibold text-[#000000]">$252,83</span>
+                    </div>
+                    <!-- Client 2 -->
+                    <div
+                        class="flex justify-between items-center transition-all p-[10px] hover:bg-[#F6F5FA] rounded-[8px]">
+                        <span class="text-[14px] md:text-[16px] font-normal text-[#000000]">2022 Albariño Fruit
+                            Winery</span>
+                        <span class="text-[14px] md:text-[16px] font-semibold text-[#000000]">$252,83</span>
+                    </div>
+                    <!-- Client 3 -->
+                    <div
+                        class="flex justify-between items-center transition-all p-[10px] hover:bg-[#F6F5FA] rounded-[8px]">
+                        <span class="text-[14px] md:text-[16px] font-normal text-[#000000]">2022 Albariño Fruit
+                            Winery</span>
+                        <span class="text-[14px] md:text-[16px] font-semibold text-[#000000]">$252,83</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Bottom space for footer -->
+            <div class="h-[60px]"></div>
+        </section>
+
+    </main>
+    <!-- footer -->
+    <footer class="fixed bottom-0 z-[99] w-full lg:hidden">
+        <!-- Background & Shape -->
+        <div class="flex items-end w-full h-[80px] drop-shadow-[0_-5px_10px_rgba(0,0,0,0.05)]">
+            <!-- Left Side -->
+            <div class="bg-[#181C2A] h-full flex-1 rounded-tl-[16px]"></div>
+
+            <!-- Center Notch -->
+            <div class="relative w-[100px] h-full shrink-0">
+                <svg class="w-full h-full text-[#181C2A] fill-current" viewBox="0 0 100 80" preserveAspectRatio="none">
+                    <path d="M0,0 H30 Q50,55 70,0 H100 V80 H0 Z" />
+                </svg>
+                <!-- Floating Action Button -->
+                <button
+                    class="absolute -top-[28px] left-1/2 -translate-x-1/2 w-[56px] h-[56px] loginbg rotate-45 rounded-[16px] flex items-center justify-center shadow-[0_4px_15px_rgba(93,85,178,0.4)] border-[6px] border-[#ffffff]">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="-rotate-45">
+                        <path d="M12 5V19" stroke="white" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M5 12H19" stroke="white" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Right Side -->
+            <div class="bg-[#181C2A] h-full flex-1 rounded-tr-[16px]"></div>
+        </div>
+
+        <!-- Content Overlay -->
+        <div
+            class="absolute inset-0 flex flex-row items-center justify-between px-[20px] pb-[10px] pointer-events-none">
+            <!-- Left Icons -->
+            <div class="flex flex-1 justify-around items-center pr-[40px] pointer-events-auto">
+                <div class="flex flex-col items-center gap-[6px]">
+                    <img src="./images/home.svg" alt="home" class="h-[20px] w-auto opacity-50">
+                    <span class="text-[11px] text-[#777D93] font-medium">Home</span>
+                </div>
+                <div class="flex flex-col items-center gap-[6px]">
+                    <img src="./images/wine.svg" alt="winery" class="h-[20px] w-auto">
+                    <span class="text-[11px] text-white font-medium">Winery</span>
+                </div>
+            </div>
+
+            <!-- Spacer for Center FAB -->
+            <div class="w-[60px]"></div>
+
+            <!-- Right Icons -->
+            <div class="flex flex-1 justify-around items-center pl-[40px] pointer-events-auto">
+                <div class="flex flex-col items-center gap-[6px]">
+                    <img src="./images/task.svg" alt="orders" class="h-[20px] w-auto opacity-50">
+                    <span class="text-[11px] text-[#777D93] font-medium">Orders</span>
+                </div>
+                <div class="flex flex-col items-center gap-[6px]">
+                    <img src="./images/notes.svg" alt="notes" class="h-[20px] w-auto opacity-50">
+                    <span class="text-[11px] text-[#777D93] font-medium">Notes</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- JAVASCRIPT -->
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maintenace Add</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+</head>
+
+<body class="font-work-sans bg-[#ffffff] relative h-screen">
+    <!-- Desktop Sidebar -->
+    <aside
+        class="fixed left-0 top-0 h-full w-[250px] bg-white border-r border-[#F6F5FA] hidden lg:flex flex-col z-[60]">
+        <!-- Logo -->
+        <div class="h-[100px] flex items-center justify-center border-b border-[#F6F5FA]">
+            <h1 class="text-[24px] font-bold text-[#5D55B2]">StudioExcel</h1>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="flex-1 overflow-y-auto py-[20px] px-[16px] flex flex-col gap-[8px]">
+            <!-- Home -->
+            <a href="dashboard.html"
+                class="flex items-center gap-[12px] px-[16px] py-[12px] hover:bg-[#F6F5FA] rounded-[12px] text-[#545454] hover:text-[#5D55B2] group transition-all">
+                <img src="./images/home.svg" alt="home"
+                    class="h-[20px] w-auto group-hover:filter-purple grayscale opacity-70 group-hover:opacity-100 group-hover:grayscale-0 transition-all">
+                <span class="text-[16px] font-medium">Home</span>
+            </a>
+            <!-- Winery -->
+            <a href="#"
+                class="flex items-center gap-[12px] px-[16px] py-[12px] hover:bg-[#F6F5FA] rounded-[12px] text-[#545454] hover:text-[#5D55B2] group transition-all">
+                <img src="./images/wine.svg" alt="winery"
+                    class="h-[20px] w-auto group-hover:filter-purple grayscale opacity-70 group-hover:opacity-100 group-hover:grayscale-0 transition-all">
+                <span class="text-[16px] font-medium">Winery</span>
+            </a>
+            <!-- Orders -->
+            <a href="#"
+                class="flex items-center gap-[12px] px-[16px] py-[12px] hover:bg-[#F6F5FA] rounded-[12px] text-[#545454] hover:text-[#5D55B2] group transition-all">
+                <img src="./images/task.svg" alt="orders"
+                    class="h-[20px] w-auto group-hover:filter-purple grayscale opacity-70 group-hover:opacity-100 group-hover:grayscale-0 transition-all">
+                <span class="text-[16px] font-medium">Orders</span>
+            </a>
+            <!-- Notes -->
+            <a href="#"
+                class="flex items-center gap-[12px] px-[16px] py-[12px] hover:bg-[#F6F5FA] rounded-[12px] text-[#545454] hover:text-[#5D55B2] group transition-all">
+                <img src="./images/notes.svg" alt="notes"
+                    class="h-[20px] w-auto group-hover:filter-purple grayscale opacity-70 group-hover:opacity-100 group-hover:grayscale-0 transition-all">
+                <span class="text-[16px] font-medium">Notes</span>
+            </a>
+        </nav>
+
+        <!-- User Profile (Bottom) -->
+        <div class="p-[16px] border-t border-[#F6F5FA]">
+            <div class="flex items-center gap-[12px]">
+                <img src="https://i.pravatar.cc/100?img=1" alt="avatar" class="w-[40px] h-[40px] rounded-full">
+                <div class="flex flex-col">
+                    <span class="text-[14px] font-semibold text-[#1F1F1F]">Alex Joy</span>
+                    <span class="text-[12px] text-[#545454]">Admin</span>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- navbar (removable) -->
+    <header class="py-[10px] px-[20px] absolute w-full top-0 z-[99] block md:hidden lg:hidden bg-white">
+        <div class="flex justify-between items-center">
+            <!-- left -->
+            <div class="">
+                <span class="text-[10px] text-[#1F1F1F] font-medium uppercase">9:00 AM</span>
+            </div>
+            <!-- right -->
+            <div class="flex flex-row items-center gap-[6.27px]">
+                <img src="./images/navbar/black-network.svg" alt="network" class="h-[11.23px] w-full">
+                <img src="./images/navbar/black-wifi.svg" alt="wifi" class="h-[11.23px] w-full">
+                <img src="./images/navbar/black-battery.svg" alt="battery" class="h-[11.23px] w-full">
+            </div>
+        </div>
+    </header>
+    <!-- main content -->
+    <main class="">
+        <!-- top bar -->
+        <section
+            class="px-[20px] fixed top-0 pt-[56px] w-full lg:w-[calc(100%-250px)] lg:left-[250px] z-[50] bg-white transition-all">
+            <!-- 1 -->
+            <div class="flex flex-row items-center justify-between pb-[10px]">
+                <!-- left -->
+                <div class="flex flex-row items-center gap-[12px]">
+                    <button
+                        class="w-[44px] h-[44px] rounded-full border-[1px] border-[#E2E2E2] flex justify-center items-center">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.77254 5.43579L3.20837 11L8.77254 16.5641" stroke="#292D32" stroke-width="1.5"
+                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M18.7916 11H3.36414" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <h2 class="text-[18px] md:text-[24px] text-[#000000] font-medium transition-all">Client Details</h2>
+                </div>
+                <!-- right -->
+                <button
+                    class="w-[44px] h-[44px] rounded-full border-[1px] border-[#E2E2E2] flex justify-center items-center relative">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.75 12.9722L12.9721 0.750048" stroke="#292D32" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M12.9721 12.9721L0.75 0.75" stroke="#292D32" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+        </section>
+        <!-- form -->
+        <section
+            class="h-screen overflow-y-auto pt-[124px] pb-[150px] bg-[#FFFFFF] w-full lg:pl-[270px] lg:pt-[140px] transition-all">
+            <!-- Client Details Form -->
+            <div class="px-[20px] w-full relative z-[10] flex justify-center lg:justify-start">
+                <div
+                    class="w-full max-w-[500px] md:max-w-[600px] lg:max-w-[700px] bg-[#ffffff] border-[1px] border-[#F6F5FA] rounded-[16px] py-[20px] px-[16px] md:p-[30px] shadow-[4px_3px_32px_rgba(204,202,223,0.26)] transition-all">
+
+                    <form class="flex flex-col gap-[16px]">
+                        <!-- Name -->
+                        <div class="flex flex-col gap-[8px]">
+                            <label
+                                class="text-[14px] md:text-[16px] text-[#545454] font-normal transition-all">Name</label>
+                            <div class="relative w-full">
+                                <input type="text" value="Alex Joy"
+                                    class="w-full h-[52px] pl-[16px] pr-[56px] border border-[#E0DFF0] rounded-[16px] text-[14px] md:text-[16px] text-[#1F1F1F] font-medium outline-none focus:border-[#5D55B2] placeholder:text-[#1F1F1F] transition-all">
+                                <div
+                                    class="absolute right-[8px] top-[8px] bottom-[8px] w-[40px] bg-[#F6F5FA] rounded-[12px] flex items-center justify-center">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M10.1361 9.05841C10.0527 9.05008 9.95273 9.05008 9.86107 9.05841C7.87773 8.99175 6.30273 7.36675 6.30273 5.36675C6.30273 3.32508 7.95273 1.66675 10.0027 1.66675C12.0444 1.66675 13.7027 3.32508 13.7027 5.36675C13.6944 7.36675 12.1194 8.99175 10.1361 9.05841Z"
+                                            stroke="#7168CD" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M5.96563 12.1333C3.94896 13.4833 3.94896 15.6833 5.96563 17.0249C8.25729 18.5583 12.0156 18.5583 14.3073 17.0249C16.324 15.6749 16.324 13.4749 14.3073 12.1333C12.024 10.6083 8.26562 10.6083 5.96563 12.1333Z"
+                                            stroke="#7168CD" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Street -->
+                        <div class="flex flex-col gap-[8px]">
+                            <label class="text-[14px] text-[#545454] font-normal">Street</label>
+                            <div class="relative w-full">
+                                <input type="text" value="906 S. Francisco Street"
+                                    class="w-full h-[52px] pl-[16px] pr-[56px] border border-[#E0DFF0] rounded-[16px] text-[14px] text-[#1F1F1F] font-medium outline-none focus:border-[#5D55B2] placeholder:text-[#1F1F1F]">
+                                <div
+                                    class="absolute right-[8px] top-[8px] bottom-[8px] w-[40px] bg-[#F6F5FA] rounded-[12px] flex items-center justify-center">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M1.72537 3.83315C2.39204 0.949821 6.73371 0.949821 7.39204 3.83315C7.78371 5.52482 6.70871 6.95815 5.77537 7.84982C5.09204 8.49982 4.01704 8.49149 3.33371 7.84982C2.40871 6.95815 1.33371 5.52482 1.72537 3.83315Z"
+                                            stroke="#7168CD" stroke-width="1.5" />
+                                        <path
+                                            d="M12.5583 13.8332C13.225 10.9498 17.5917 10.9498 18.2583 13.8332C18.65 15.5248 17.575 16.9582 16.6333 17.8498C15.95 18.4998 14.8667 18.4915 14.1833 17.8498C13.2417 16.9582 12.1667 15.5248 12.5583 13.8332Z"
+                                            stroke="#7168CD" stroke-width="1.5" />
+                                        <path
+                                            d="M9.99942 4.16675H12.2328C13.7744 4.16675 14.4911 6.07508 13.3328 7.09175L6.67443 12.9167C5.51609 13.9251 6.23276 15.8334 7.76609 15.8334H9.99942"
+                                            stroke="#7168CD" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M4.57111 4.58341H4.58074" stroke="#7168CD" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M15.4051 14.5834H15.4147" stroke="#7168CD" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Postal Code -->
+                        <div class="flex flex-col gap-[8px]">
+                            <label class="text-[14px] text-[#545454] font-normal">Postal Code</label>
+                            <div class="relative w-full">
+                                <input type="text" value="90015"
+                                    class="w-full h-[52px] pl-[16px] pr-[56px] border border-[#E0DFF0] rounded-[16px] text-[14px] text-[#1F1F1F] font-medium outline-none focus:border-[#5D55B2] placeholder:text-[#1F1F1F]">
+                                <div
+                                    class="absolute right-[8px] top-[8px] bottom-[8px] w-[40px] bg-[#F6F5FA] rounded-[12px] flex items-center justify-center">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M1.66602 7.08317C1.66602 4.1665 3.33268 2.9165 5.83268 2.9165H14.166C16.666 2.9165 18.3327 4.1665 18.3327 7.08317V12.9165C18.3327 15.8332 16.666 17.0832 14.166 17.0832H5.83268"
+                                            stroke="#7168CD" stroke-width="1.5" stroke-miterlimit="10"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M14.1673 7.5L11.559 9.58333C10.7006 10.2667 9.29231 10.2667 8.43398 9.58333L5.83398 7.5"
+                                            stroke="#7168CD" stroke-width="1.5" stroke-miterlimit="10"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M1.66602 13.75H6.66602" stroke="#7168CD" stroke-width="1.5"
+                                            stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M1.66602 10.4165H4.16602" stroke="#7168CD" stroke-width="1.5"
+                                            stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- City -->
+                        <div class="flex flex-col gap-[8px]">
+                            <label class="text-[14px] text-[#545454] font-normal">City</label>
+                            <div class="relative w-full">
+                                <input type="text" value="Los Angeles"
+                                    class="w-full h-[52px] pl-[16px] pr-[56px] border border-[#E0DFF0] rounded-[16px] text-[14px] text-[#1F1F1F] font-medium outline-none focus:border-[#5D55B2] placeholder:text-[#1F1F1F]">
+                                <div
+                                    class="absolute right-[8px] top-[8px] bottom-[8px] w-[40px] bg-[#F6F5FA] rounded-[12px] flex items-center justify-center">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M10.8337 18.3334H4.16699C2.50033 18.3334 1.66699 17.5001 1.66699 15.8334V9.16675C1.66699 7.50008 2.50033 6.66675 4.16699 6.66675H8.33366V15.8334C8.33366 17.5001 9.16699 18.3334 10.8337 18.3334Z"
+                                            stroke="#7168CD" stroke-width="1.5" stroke-miterlimit="10"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M8.42531 3.33325C8.35865 3.58325 8.33366 3.85825 8.33366 4.16659V6.66659H4.16699V4.99992C4.16699 4.08325 4.91699 3.33325 5.83366 3.33325H8.42531Z"
+                                            stroke="#7168CD" stroke-width="1.5" stroke-miterlimit="10"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M11.667 6.66675V10.8334" stroke="#7168CD" stroke-width="1.5"
+                                            stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M15 6.66675V10.8334" stroke="#7168CD" stroke-width="1.5"
+                                            stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M14.167 14.1667H12.5003C12.042 14.1667 11.667 14.5417 11.667 15.0001V18.3334H15.0003V15.0001C15.0003 14.5417 14.6253 14.1667 14.167 14.1667Z"
+                                            stroke="#7168CD" stroke-width="1.5" stroke-miterlimit="10"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M5 10.8333V14.1666" stroke="#7168CD" stroke-width="1.5"
+                                            stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M8.33301 15.8334V4.16675C8.33301 2.50008 9.16634 1.66675 10.833 1.66675H15.833C17.4997 1.66675 18.333 2.50008 18.333 4.16675V15.8334C18.333 17.5001 17.4997 18.3334 15.833 18.3334H10.833C9.16634 18.3334 8.33301 17.5001 8.33301 15.8334Z"
+                                            stroke="#7168CD" stroke-width="1.5" stroke-miterlimit="10"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Province -->
+                        <div class="flex flex-col gap-[8px]">
+                            <label class="text-[14px] text-[#545454] font-normal">Province</label>
+                            <div class="relative w-full">
+                                <select name="province"
+                                    class="w-full h-[52px] pl-[16px] pr-[56px] border border-[#E0DFF0] rounded-[16px] text-[14px] text-[#1F1F1F] font-medium outline-none focus:border-[#5D55B2] bg-white appearance-none cursor-pointer">
+                                    <option value="" disabled>Select Province</option>
+                                    <option value="British Columbia">British Columbia</option>
+                                    <option value="Ontario">Ontario</option>
+                                    <option value="Quebec">Quebec</option>
+                                    <option value="Alberta">Alberta</option>
+                                    <option value="California" selected>California</option>
+                                    <option value="New York">New York</option>
+                                </select>
+                                <div
+                                    class="absolute right-[8px] top-[8px] bottom-[8px] w-[40px] bg-[#F6F5FA] rounded-[12px] flex items-center justify-center pointer-events-none">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M16.6004 7.4585L11.1671 12.8918C10.5254 13.5335 9.47539 13.5335 8.83372 12.8918L3.40039 7.4585"
+                                            stroke="#7168CD" stroke-width="1.5" stroke-miterlimit="10"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Gender (using "Gredner" to match image if strict, but let's stick to Gender unless user complains, or maybe "Gender" with typo concern? I'll use Gender) -->
+                        <div class="flex flex-col gap-[8px]">
+                            <label class="text-[14px] text-[#545454] font-normal">Gredner</label>
+                            <div class="flex flex-row gap-[12px]">
+                                <!-- Female -->
+                                <label
+                                    class="flex-1 h-[52px] border border-[#E0DFF0] rounded-[16px] flex items-center px-[16px] cursor-pointer bg-white relative">
+                                    <input type="radio" name="gender" class="peer hidden" checked>
+                                    <div
+                                        class="w-[18px] h-[18px] shrink-0 rounded-full border-[1.5px] border-[#5D55B2] flex items-center justify-center mr-[10px] peer-checked:[&>div]:opacity-100">
+                                        <div
+                                            class="w-[12px] h-[12px] rounded-full bg-[#5D55B2] opacity-0 transition-opacity duration-200">
+                                        </div>
+                                    </div>
+                                    <span class="text-[14px] text-[#1F1F1F] font-medium">Female</span>
+                                </label>
+                                <!-- Male -->
+                                <label
+                                    class="flex-1 h-[52px] border border-[#E0DFF0] rounded-[16px] flex items-center px-[16px] cursor-pointer bg-white relative">
+                                    <input type="radio" name="gender" class="peer hidden">
+                                    <div
+                                        class="w-[18px] h-[18px] shrink-0 rounded-full border-[1.5px] border-[#5D55B2] flex items-center justify-center mr-[10px] peer-checked:[&>div]:opacity-100">
+                                        <div
+                                            class="w-[12px] h-[12px] rounded-full bg-[#5D55B2] opacity-0 transition-opacity duration-200">
+                                        </div>
+                                    </div>
+                                    <span class="text-[14px] text-[#1F1F1F] font-medium">Male</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Checkbox -->
+                        <div class="flex flex-row gap-[7px] items-center">
+                            <label class="relative flex items-center justify-center cursor-pointer w-[20px] h-[20px]">
+                                <input type="checkbox" class="peer sr-only">
+                                <div
+                                    class="w-full h-full border-[1.5px] border-[#5D55B2] rounded-[7px] bg-white transition-all">
+                                </div>
+                                <svg class="absolute w-[8px] h-[8px] text-[#5D55B2] hidden peer-checked:block pointer-events-none top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                                    width="10" height="8" viewBox="0 0 10 8" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.75 3.58L3.58 6.41L9.25 0.75" stroke="#5D55B2" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+
+                            </label>
+                            <span class="text-[14px] text-[#545454] font-normal">I agree to the myself</span>
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="flex flex-row gap-[14px] mt-[10px]">
+                            <button type="button"
+                                class="flex-1 h-[54px] rounded-[60px] loginbg text-white text-[18px] font-semibold transition-all hover:opacity-90 active:scale-95">Ok</button>
+                            <button type="button"
+                                class="flex-1 h-[54px] rounded-[60px] border border-[#5D55B2] bg-white text-[#5D55B2] text-[18px] font-semibold transition-all hover:bg-[#F6F5FA] active:scale-95">Cancel</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <!-- footer -->
+    <footer class="fixed bottom-0 z-[99] w-full lg:hidden">
+        <!-- Background & Shape -->
+        <div class="flex items-end w-full h-[80px] drop-shadow-[0_-5px_10px_rgba(0,0,0,0.05)]">
+            <!-- Left Side -->
+            <div class="bg-[#181C2A] h-full flex-1 rounded-tl-[16px]"></div>
+
+            <!-- Center Notch -->
+            <div class="relative w-[100px] h-full shrink-0">
+                <svg class="w-full h-full text-[#181C2A] fill-current" viewBox="0 0 100 80" preserveAspectRatio="none">
+                    <path d="M0,0 H30 Q50,55 70,0 H100 V80 H0 Z" />
+                </svg>
+                <!-- Floating Action Button -->
+                <button
+                    class="absolute -top-[28px] left-1/2 -translate-x-1/2 w-[56px] h-[56px] loginbg rotate-45 rounded-[16px] flex items-center justify-center shadow-[0_4px_15px_rgba(93,85,178,0.4)] border-[6px] border-[#ffffff]">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="-rotate-45">
+                        <path d="M12 5V19" stroke="white" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M5 12H19" stroke="white" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Right Side -->
+            <div class="bg-[#181C2A] h-full flex-1 rounded-tr-[16px]"></div>
+        </div>
+
+        <!-- Content Overlay -->
+        <div
+            class="absolute inset-0 flex flex-row items-center justify-between px-[20px] pb-[10px] pointer-events-none">
+            <!-- Left Icons -->
+            <div class="flex flex-1 justify-around items-center pr-[40px] pointer-events-auto">
+                <div class="flex flex-col items-center gap-[6px]">
+                    <img src="./images/home.svg" alt="home" class="h-[20px] w-auto opacity-50">
+                    <span class="text-[11px] text-[#777D93] font-medium">Home</span>
+                </div>
+                <div class="flex flex-col items-center gap-[6px]">
+                    <img src="./images/wine.svg" alt="winery" class="h-[20px] w-auto">
+                    <span class="text-[11px] text-white font-medium">Winery</span>
+                </div>
+            </div>
+
+            <!-- Spacer for Center FAB -->
+            <div class="w-[60px]"></div>
+
+            <!-- Right Icons -->
+            <div class="flex flex-1 justify-around items-center pl-[40px] pointer-events-auto">
+                <div class="flex flex-col items-center gap-[6px]">
+                    <img src="./images/task.svg" alt="orders" class="h-[20px] w-auto opacity-50">
+                    <span class="text-[11px] text-[#777D93] font-medium">Orders</span>
+                </div>
+                <div class="flex flex-col items-center gap-[6px]">
+                    <img src="./images/notes.svg" alt="notes" class="h-[20px] w-auto opacity-50">
+                    <span class="text-[11px] text-[#777D93] font-medium">Notes</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- JAVASCRIPT -->
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
