@@ -2,6 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .active-ft span {
+    @apply font-semibold text-white;
+  }
+  .active-ft svg path {
+    fill: white !important;
+    stroke: white !important;
+    opacity: 1 !important;
+  }
+  .active-ft .footer-bar {
+    @apply opacity-100;
+  }
+  .footer-bar {
+    @apply opacity-0 transition-opacity duration-300;
+  }
+}
+
 .shaper {
   background: linear-gradient(180deg, #7168cd 0%, #786edb 100%);
 }
