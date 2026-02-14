@@ -25,15 +25,15 @@
         <nav class="flex-1 overflow-y-auto py-[20px] px-[16px] flex flex-col gap-[8px]">
             <!-- Home -->
             <a href="dashboard.html"
-                class="flex items-center gap-[12px] px-[16px] py-[12px] hover:bg-[#F6F5FA] rounded-[12px] text-[#545454] hover:text-[#5D55B2] group transition-all">
-                <img src="./images/home.svg" alt="home"
-                    class="h-[20px] w-auto group-hover:filter-purple grayscale opacity-70 group-hover:opacity-100 group-hover:grayscale-0 transition-all">
+                class="flex items-center gap-[12px] px-[16px] py-[12px] bg-[#F6F5FA] rounded-[12px] text-[#5D55B2]">
+                <img src="./images/home.svg" alt="home" class="h-[20px] w-auto filter-purple">
                 <span class="text-[16px] font-medium">Home</span>
             </a>
             <!-- Winery -->
             <a href="#"
-                class="flex items-center gap-[12px] px-[16px] py-[12px] bg-[#F6F5FA] rounded-[12px] text-[#5D55B2]">
-                <img src="./images/wine.svg" alt="winery" class="h-[20px] w-auto filter-purple">
+                class="flex items-center gap-[12px] px-[16px] py-[12px] hover:bg-[#F6F5FA] rounded-[12px] text-[#545454] hover:text-[#5D55B2] group transition-all">
+                <img src="./images/wine.svg" alt="winery"
+                    class="h-[20px] w-auto group-hover:filter-purple grayscale opacity-70 group-hover:opacity-100 group-hover:grayscale-0 transition-all">
                 <span class="text-[16px] font-medium">Winery</span>
             </a>
             <!-- Orders -->
@@ -65,25 +65,11 @@
     </aside>
 
     <!-- navbar (removable) -->
-    <header class="py-[10px] px-[20px] absolute w-full top-0 z-[99] block md:hidden lg:hidden bg-white">
-        <div class="flex justify-between items-center">
-            <!-- left -->
-            <div class="">
-                <span class="text-[10px] text-[#1F1F1F] font-medium uppercase">9:00 AM</span>
-            </div>
-            <!-- right -->
-            <div class="flex flex-row items-center gap-[6.27px]">
-                <img src="./images/navbar/black-network.svg" alt="network" class="h-[11.23px] w-full">
-                <img src="./images/navbar/black-wifi.svg" alt="wifi" class="h-[11.23px] w-full">
-                <img src="./images/navbar/black-battery.svg" alt="battery" class="h-[11.23px] w-full">
-            </div>
-        </div>
-    </header>
     <!-- main content -->
     <main class="">
         <!-- top bar -->
         <section
-            class="px-[20px] fixed top-0 pt-[56px] w-full lg:w-[calc(100%-250px)] lg:left-[250px] z-10 bg-white transition-all">
+            class="px-[20px] fixed top-0 pt-[26px] w-full lg:w-[calc(100%-250px)] lg:left-[250px] z-10 bg-white transition-all">
             <!-- 1 -->
             <div class="flex flex-row items-center justify-between">
                 <!-- left -->
@@ -151,7 +137,7 @@
 
         <!-- List -->
         <section
-            class="pt-[280px] px-[20px] pb-[200px] overflow-y-auto h-screen bg-white lg:pl-[270px] lg:pt-[300px] transition-all">
+            class="pt-[237px] px-[20px] pb-[200px] overflow-y-auto no-scrollbar h-screen bg-white lg:pl-[270px] transition-all">
             <div class="flex flex-col gap-[14px]">
                 <!-- Item 1 -->
                 <div
@@ -181,10 +167,13 @@
                 </div>
 
                 <!-- Item 2 -->
-                <div class="p-[16px] rounded-[16px] bg-[#F6F5FA] flex flex-col gap-[11px]">
+                <div
+                    class="p-[16px] rounded-[16px] bg-[#F6F5FA] flex flex-col gap-[11px] transition-all hover:bg-[#eae9f5]">
                     <div class="flex flex-row justify-between items-center">
-                        <h3 class="text-[14px] font-semibold text-[#000000]">2022 Albariño Fruit Winery</h3>
-                        <span class="text-[14px] font-semibold text-[#000000]">$252,83</span>
+                        <h3 class="text-[14px] md:text-[16px] font-semibold text-[#000000] transition-all">2022 Albariño
+                            Fruit Winery</h3>
+                        <span
+                            class="text-[14px] md:text-[16px] font-semibold text-[#000000] transition-all">$252,83</span>
                     </div>
                     <div class="flex flex-row justify-between items-center">
                         <span
@@ -205,10 +194,13 @@
                 </div>
 
                 <!-- Item 3 -->
-                <div class="p-[16px] rounded-[16px] bg-[#F6F5FA] flex flex-col gap-[11px]">
+                <div
+                    class="p-[16px] rounded-[16px] bg-[#F6F5FA] flex flex-col gap-[11px] transition-all hover:bg-[#eae9f5]">
                     <div class="flex flex-row justify-between items-center">
-                        <h3 class="text-[14px] font-semibold text-[#000000]">2022 Albariño Fruit Winery</h3>
-                        <span class="text-[14px] font-semibold text-[#000000]">$252,83</span>
+                        <h3 class="text-[14px] md:text-[16px] font-semibold text-[#000000] transition-all">2022 Albariño
+                            Fruit Winery</h3>
+                        <span
+                            class="text-[14px] md:text-[16px] font-semibold text-[#000000] transition-all">$252,83</span>
                     </div>
                     <div class="flex flex-row justify-between items-center">
                         <span
@@ -229,10 +221,13 @@
                 </div>
 
                 <!-- Item 4 -->
-                <div class="p-[16px] rounded-[16px] bg-[#F6F5FA] flex flex-col gap-[11px]">
+                <div
+                    class="p-[16px] rounded-[16px] bg-[#F6F5FA] flex flex-col gap-[11px] transition-all hover:bg-[#eae9f5]">
                     <div class="flex flex-row justify-between items-center">
-                        <h3 class="text-[14px] font-semibold text-[#000000]">2022 Albariño Fruit Winery</h3>
-                        <span class="text-[14px] font-semibold text-[#000000]">$252,83</span>
+                        <h3 class="text-[14px] md:text-[16px] font-semibold text-[#000000] transition-all">2022 Albariño
+                            Fruit Winery</h3>
+                        <span
+                            class="text-[14px] md:text-[16px] font-semibold text-[#000000] transition-all">$252,83</span>
                     </div>
                     <div class="flex flex-row justify-between items-center">
                         <span
@@ -252,10 +247,39 @@
                     </div>
                 </div>
                 <!-- Item 5 -->
-                <div class="p-[16px] rounded-[16px] bg-[#F6F5FA] flex flex-col gap-[11px]">
+                <div
+                    class="p-[16px] rounded-[16px] bg-[#F6F5FA] flex flex-col gap-[11px] transition-all hover:bg-[#eae9f5]">
                     <div class="flex flex-row justify-between items-center">
-                        <h3 class="text-[14px] font-semibold text-[#000000]">2022 Albariño Fruit Winery</h3>
-                        <span class="text-[14px] font-semibold text-[#000000]">$252,83</span>
+                        <h3 class="text-[14px] md:text-[16px] font-semibold text-[#000000] transition-all">2022 Albariño
+                            Fruit Winery</h3>
+                        <span
+                            class="text-[14px] md:text-[16px] font-semibold text-[#000000] transition-all">$252,83</span>
+                    </div>
+                    <div class="flex flex-row justify-between items-center">
+                        <span
+                            class="text-[14px] text-[#545454] font-normal inline-flex justify-between items-center">Size
+                            750 ml<span
+                                class="mx-[5px] w-[6px] h-[6px] rounded-full bg-[#5D55B2] inline-block"></span>12
+                            bottles</span>
+                        <!-- Counter -->
+                        <div
+                            class="flex items-center gap-[12px] bg-white rounded-[60px] px-[10px] w-[88px] h-[30px] border border-[#E2E2E2]">
+                            <button
+                                class="w-[20px] h-[20px] flex items-center justify-center text-[#111526] font-medium">-</button>
+                            <span class="text-[14px] font-medium text-[#1F1F1F]">2</span>
+                            <button
+                                class="w-[20px] h-[20px] flex items-center justify-center text-[#111526] font-medium">+</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 6 -->
+                <div
+                    class="p-[16px] rounded-[16px] bg-[#F6F5FA] flex flex-col gap-[11px] transition-all hover:bg-[#eae9f5]">
+                    <div class="flex flex-row justify-between items-center">
+                        <h3 class="text-[14px] md:text-[16px] font-semibold text-[#000000] transition-all">2022 Albariño
+                            Fruit Winery</h3>
+                        <span
+                            class="text-[14px] md:text-[16px] font-semibold text-[#000000] transition-all">$252,83</span>
                     </div>
                     <div class="flex flex-row justify-between items-center">
                         <span
@@ -278,7 +302,7 @@
 
             <!-- Floating Button -->
             <div
-                class="fixed bottom-0 left-0 right-0 lg:left-[250px] pb-[100px] pt-[10px] whitetrans flex justify-center transition-all">
+                class="fixed bottom-0 left-0 right-0 lg:left-[250px] pb-[110px] lg:pb-[60px] pt-[0px] whitetrans flex justify-center transition-all">
                 <button
                     class="w-full max-w-[186px] h-[54px] loginbg rounded-[60px] text-[#FFFFFF] text-[18px] font-semibold shadow-[0px_4px_20px_rgba(93,85,178,0.4)] transition-all duration-300 ease-in-out hover:scale-105 hover:brightness-110 active:scale-95">
                     Back To Order
